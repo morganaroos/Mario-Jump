@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Graduate&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-bottom {
+    width: 100%;
+    position: relative;
+    background-color: #E38B29;
+    overflow: hidden;
+    height: 10.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botao-restart{
+    font-family: 'Graduate', cursive;
+    font-size: 30px;
+    background-color: #FFD8A9;
+    width: 180px;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.botao-restart:hover {
+    background-color: #78cc78;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #20bb20;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    width: 450px;
+    position: absolute;
+    animation: clouds-animation 25s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 190px;
+    }
+
+    50% {
+        bottom: 190px;
+    }
+
+    60% {
+        bottom: 190px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -450px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
